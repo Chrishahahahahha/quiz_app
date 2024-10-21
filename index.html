@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App ng Pagsusulit</title>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+
+            <!-- Landing Page -->
+            <div class="landing-page">
+                <img src="https://cdn-icons-png.flaticon.com/512/2958/2958990.png" alt="">
+                <h1>App ng Pagsusulit</h1>
+                <div class="line"></div>
+                <p>Tignan natin kung bobo ka</p>
+                <button onclick="showGameCategory()">Simulan ang Pagsusulit!</button>
+            </div>
+
+            <!-- Game Category Selection -->
+            <div class="game-category" style="display: none;">
+                <h1>Pumili ng Kategorya</h1>
+                <div class="line"></div>
+                <div class="category-options">
+                    <button onclick="selectCategory('kasaysayan')">Kasaysayan</button>
+                    <button onclick="selectCategory('lokasyon')">Lokasyon</button>
+                    <button onclick="selectCategory('musika')">Musika</button>
+                </div>
+            </div>
+
+            <!-- Difficulty Selection -->
+            <div class="difficulty-selection" style="display: none;">
+                <h1>Pumili ng Antas ng Kahirapan</h1>
+                <div class="line"></div>
+                <div class="difficulty-options">
+                    <button onclick="startQuiz('easy')">Madali</button>
+                    <button onclick="startQuiz('normal')">Katamtaman</button>
+                    <button onclick="startQuiz('hard')">Mahirap</button>
+                </div>
+            </div>
+
+            <!-- Quiz Section -->
+            <div class="quiz" style="display: none;">
+                <h2 id="question"></h2>
+                <p id="score">Score: 0</p>
+                <div id="options-container"></div>
+                <button class="restart-game" onclick="showLandingPage()">Magsimula Muli</button>
+            </div>
+
+            <!-- Popup for Correct/Incorrect -->
+            <div id="popup" style="display: none;">
+                <p id="popup-text"></p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Include Question Files -->
+    <script src="./tanong_easy.js"></script>
+    <script src="./tanong_normal.js"></script>
+    <script src="./tanong_hard.js"></script>
+    <!-- Main Script JS -->
+    <script src="./script.js"></script>
+</body>
+</html>
